@@ -1,0 +1,98 @@
+<!--PROJETO INICIAL ESCRITO POR THAYNAN FERREIRA NUNES-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon"> <!--favicon do lil boyy-->
+    <link rel="stylesheet" href="style/style.css"> <!--Link para o CSS externo-->
+    <title>Lil Boyy</title>
+</head>
+<body>
+    <header> <!--Area destinada ao cabeçalho do site, com as primeiras infos e o menu interativo-->
+        <h1 class="cabecalho">
+            Lil Boyy
+        </h1>
+        <p class="cabecalho">
+            Este site foi desenvolvido para que se entre em contato com o rapper Lil Boyy
+        </p>
+        <nav id="nav"> <!--Area onde se inicia o menu interativo-->
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"  aria-expanded="false"><!--Botao ativado via JS com um media query para que ele so aconteça em mobile-->Menu
+
+                <span id="hamburguer"></span> <!--Area interativa utilizada para abrir o menu interativo no mobile-->
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">Social</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> <!--Inicio da area de artigos do site, com os textos e midias a serem consumidos-->
+        <section>
+            <h1 class="titulo">
+                Shows
+            </h1>
+            <article >
+                <h2 class="fundo">
+                    Ultimo Show
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex asperiores ad dignissimos obcaecati itaque distinctio dicta dolor, officiis, beatae mollitia recusandae possimus nihil enim laudantium animi libero incidunt ea odio!
+                </p>
+                <h2 class="fundo">
+                    Proximo Show
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum corrupti, cum magnam, aliquam eaque aspernatur perspiciatis voluptas, unde nostrum nobis iure beatae deserunt labore. Ipsum debitis inventore asperiores suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequatur quas sapiente asperiores, magnam nam voluptatum, a ipsa iusto consequuntur natus necessitatibus perferendis. Nesciunt voluptates eaque veniam ad nam architecto!
+                </p>
+                <aside> <!--Conteudo periferico com interatividade guiando o visitante para a agenda de shows-->
+                    <p>
+                        Para mais informações acesse a <a href="#" class="link">Agenda Completa</a>
+                    </p>
+                </aside>
+            </article>
+        </section>
+
+        <section>
+            <h1 class="titulo">Biografia</h1>
+            <article>
+                <h2 class="fundo">
+                    Sobre o Lil Boyy
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque rem possimus quam ipsa, vel quas nesciunt ducimus porro autem ipsam? Eligendi quibusdam aspernatur, error sit nemo a rerum et modi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque est totam inventore ex, nam cumque dolorum, aut eligendi nemo officiis, magni eum similique dolorem ab expedita tempore eaque amet officia.</p>
+                
+                <picture> <!--Artificio de HTML utilizado para uma melhor responsividade do site em relação a imagem, com os comandos a seguir se faz possivel a mudança de imagem dependendo da largura da viewport utilizada para acessar o site-->
+                    <source media="(max-width: 650px)" srcset="imagens/simples.png" type="image/png">
+                    <img src="imagens/ultra.png" alt="Lil Boyy">
+                </picture>
+                <h2 class="fundo">
+                    Ultimo Clipe lançado
+                </h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur sint perspiciatis incidunt voluptate? Distinctio reprehenderit, voluptatem adipisci eos assumenda in? Beatae commodi adipisci magni distinctio porro vero totam nisi saepe!
+                </p>
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/DvfILbKlSls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </article>
+        </section>
+    </main>
+
+    <div id="msg"> <!--Div de teste para implementação futura de uma caixa de E-mail-->
+        <p>Nos mande um E-mail</p>
+        <p id="email">E-mail <input type="text"></p>
+        
+        <input id="conteudo" type="text">
+        <input type="button" value="Enviar">
+
+    </div>
+    <footer> <!--Rodapé do site com informação do criador-->
+        <p>&copy; Site criado por Thaynan Ferreira</p>
+    </footer>  
+    <script src="script.js"></script>  
+</body>
+</html>
