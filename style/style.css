@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+@font-face { /*Adição da fonte externa baixada no site https://www.dafont.com/pt/pirata-one.font?text=ompton&psize=l*/
+    font-family: 'pirata';
+    src: url("../fontes/PirataOne-Regular.ttf") format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+:root { /*Definição de variaveis para utilização mais facil de cores e fontes*/
+    --cor0: #ba81d3;
+    --cor1: #9F48D9;
+    --cor2: #61227c;
+    --cormsg: #9262a7;
+    --fundoTitulo: #8f6a9e;
+    --link: #8f6a9e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-escolhida: 'pirata', Arial;
+}
+*{ /*Definição global de margem e padding*/
+    margin: 0px;
+    padding: 0px;
+}
+
+header{ /*Criando o fundo e determinando configurações iniciais do cabeçalho*/
+    background-image: linear-gradient(to top, var(--cor2) 30%, var(--cor1));
+    min-height: 150px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.651);
+    padding: 20px 20px 10px 20px;
+}
+header > h1{ /*Configurações do titulo presente no cabeçalho*/
+    padding: 10px;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.548);
+    color: white;
+    font-family: var(--fonte-escolhida);
+    text-align: center;
+    font-size: 50px;
+   
+}
+header > p{ /*Configurações do paragrafo inicial do site, com uma bre apresnetação*/
+    padding: 25px;
+    max-width: 500px;
+    margin: auto;
+    width: auto;
+    color: white;
+    text-align: center;
+    
+}
+#menu{ /*Estilização que faz com que o menu fique na horizontal e sem as "bolinhas de uma lista"*/
+    display: flex;
+    list-style: none;
+    
+}
+#btn-mobile{ /*Mantem o botao desatiavado para telas superiores as de mobile*/
+    display: none;
+}
+
+nav  a{ /*Estiliza os links presentes no menu de navegação*/
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px 10px 10px;
+    transition-duration: 0.5s;
+}
+nav  a:hover{ /*Estiliza o momento de passagem do mouse sobre o menu de navegação*/
+    background-color: var(--cor0);
+    color: black;
+    border-radius: 5px;
+}
+body{ /*Configuração base do corpo do site*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor0);
+}
+main p{ /*Estilização dos paragrafos presentes na parte principal da pagina, os artigos propriamente ditos*/
+    text-align: justify;
+    margin: 15px 0px;
+    text-indent: 30px;
+    font-size: 1.1em;
+    line-height: 2em;
+}
+h1.titulo{ /*Define a fonte e o tamanho dos titulos principais de cada seção*/
+    font-family: var(--fonte-escolhida);
+    font-size: 50px;
+    
+}
+main h2{ /*Estiliza os titulos de cada artigo*/
+    font-family: var(--fonte-escolhida);
+    font-size: 25px;
+    margin: 10px 0px;
+    padding: 0px 0px 0px 10px;
+}
+h2.fundo{ /*Faz o degrade presnete nos titulos dos artigos*/
+    background-image: linear-gradient(to right, var(--fundoTitulo), transparent 80% );
+}
+main{ /*Estiliza o local onde são adicionadas as seções e os artigos da pagina*/
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main img{ /*Define que a imagem ocupe 100% da largura do main*/
+    width: 100%;
+}
+div.video{ /*Estiliza a div q contem o video, para que ele fique o mais responsivo possivel*/
+    margin: 0px -20px 0px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+a.link{ /*Estiliza os links presentes no main, para que a configuração nao influencie no menu de navegação*/
+    text-decoration: none;
+    color: var(--link);
+    font-weight: bold;
+}
+aside  p{ /*Estiliza a forma de exibição do conteudo periferico do site*/
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+div#msg{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: var(--cormsg);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+}
+div#msg > p{
+    color: white;
+}
+p#email{
+    display: inline;
+    padding-right: 78px;
+}
+div > input#conteudo{
+    text-align: justify;
+    display: block;
+    width: 300px;
+    height: 100px;
+}
+footer p{
+    background-color: var(--cor2);
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+@media (min-width: 375px) and (max-width: 600px){ /*media query que define como o menu deve ser apresentado em telas pequenas*/
+
+    #btn-mobile{
+        display: block;
+        color: white;
+    }
+
+    #menu{
+       display: block;
+       position: absolute;
+       width: 100%;
+       top: 232px;
+       right: 0px;
+       background-color: var(--cor0);
+       transition: 0.6s;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
+    }
+
+   
+
+    #nav.active #menu {
+        height: calc(100vh - 219px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu li {
+        height: 50px;
+        margin-top: 16px;
+    }
+    
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+   
+   
+}
+
+@media screen and (max-width: 375px) { /*media query que define como o menu deve ser apresentado em telas mobile*/
+    #btn-mobile{
+        display: block;
+        color: white;
+    }
+
+    #menu{
+       display: block;
+       position: absolute;
+       width: 100%;
+       top: 252px; /*UNICA DIFERENÇA DE UM @MEDIA PARA O OUTRO...*/
+       right: 0px;
+       background-color: var(--cor0);
+       transition: 0.6s;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
+    }
+
+   
+
+    #nav.active #menu {
+        height: calc(100vh - 219px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu li {
+        height: 50px;
+        margin-top: 16px;
+    }
+    
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+   
+   
+}
