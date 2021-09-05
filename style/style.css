@@ -71,6 +71,15 @@ body{ /*Configuração base do corpo do site*/
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cor0);
 }
+#agenda li{
+    padding: 10px;
+    list-style: none;
+    font-family: var(--fonte-escolhida);
+    font-size: 30px;
+}
+#agenda li:hover{
+    font-size: 35px;
+}
 main p{ /*Estilização dos paragrafos presentes na parte principal da pagina, os artigos propriamente ditos*/
     text-align: justify;
     margin: 15px 0px;
