@@ -46,6 +46,9 @@ header > p{ /*Configurações do paragrafo inicial do site, com uma bre apresnet
     text-align: center;
     
 }
+.cabecalho2{
+    padding-bottom: 42px;
+}
 #menu{ /*Estilização que faz com que o menu fique na horizontal e sem as "bolinhas de uma lista"*/
     display: flex;
     list-style: none;
@@ -252,7 +255,10 @@ footer p{
    
 }
 
-@media screen and (max-width: 375px) { /*media query que define como o menu deve ser apresentado em telas mobile*/
+@media screen and (max-width: 374px) { /*media query que define como o menu deve ser apresentado em telas mobile*/
+    .cabecalho2{
+        padding-bottom: 45px;
+    }
     #btn-mobile{
         display: block;
         color: white;
@@ -262,7 +268,7 @@ footer p{
        display: block;
        position: absolute;
        width: 100%;
-       top: 252px; /*UNICA DIFERENÇA DE UM @MEDIA PARA O OUTRO...*/
+       top: 237px; /*UNICA DIFERENÇA DE UM @MEDIA PARA O OUTRO...*/
        right: 0px;
        background-color: var(--cor0);
        transition: 0.6s;
